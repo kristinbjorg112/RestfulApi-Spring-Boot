@@ -1,6 +1,6 @@
 package com.example.rest.model;
 
-import com.fasterxml.jackson.annotation.JsonUnwrapped;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Entity;
@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.Map;
 
 @Entity
 public class VesselModel {
@@ -23,6 +24,15 @@ public class VesselModel {
     private double speed;
     @UpdateTimestamp
     private Date receiveDate;
+
+    @SuppressWarnings("unchecked")
+    @JsonProperty("Position")
+    private void unpackNested(Map<String,Object> Position) {
+        this.date = (Date)Position.get("date");
+        this.latitude = (double)Position.get("latitude");
+        this.longitude = (double)Position.get("longitude");
+        this.speed = (double)Position.get("speed");
+    }
 
     //getters and setters
 
