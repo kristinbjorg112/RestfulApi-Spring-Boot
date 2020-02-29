@@ -17,7 +17,6 @@ public class VesselModel {
     private Long id;
     private String name;
     private String country;
-    @JsonUnwrapped
     private Date date;
     private double latitude;
     private double longitude;
