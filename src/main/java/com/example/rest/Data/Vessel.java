@@ -13,7 +13,6 @@ public class Vessel {
     private double speed;
     private Date receiveDate;
 
-    //Getters and setters
 
     public String getName() {
         return this.name;
