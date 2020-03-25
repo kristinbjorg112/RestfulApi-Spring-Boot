@@ -30,9 +30,6 @@ public class RestApplicationTests {
 		 VesselModel vessel = new VesselModel();
 		vessel.setName("kristin");
 		vessel.setCountry("Iceland");
-		//vessel.setSpeed(12);
-		//vessel.setLatitude(64.9312762);
-		//vessel.setLongitude(64.9312762);
 
 		Vessel data = new Vessel();
 		given(vesselService.getVessel((long) 1)).willReturn(data);
