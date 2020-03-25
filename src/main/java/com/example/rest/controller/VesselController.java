@@ -22,8 +22,6 @@ public class VesselController {
     @PostMapping(value = "/vessel")
     public ResponseEntity <Vessel> createVessel(@RequestBody Vessel vessel) {
         final Vessel vesselData = vesselService.createVessel(vessel);
-        System.out.println(vesselData.getSpeed());
-        System.out.println(vesselData.getSpeed());
         return new ResponseEntity < >(vesselData, HttpStatus.CREATED);
     }
 
