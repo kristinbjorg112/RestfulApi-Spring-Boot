@@ -81,5 +81,4 @@ public class VesselService {
         BeanUtils.copyProperties(vesselModel, vesselData);
         return vesselData;
     }
-
 }
