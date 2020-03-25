@@ -34,7 +34,6 @@ public class VesselModel {
         this.speed = (double)Position.get("speed");
     }
 
-    //getters and setters
 
     public String getName() {
         return this.name;
