@@ -39,7 +39,6 @@ public class VesselController {
         vesselData.setLongitude(vesselService.degreesToRadians(vesselData.getLongitude()));
         return new ResponseEntity < >(vesselData, HttpStatus.OK);
     }
-
     /*
         Get the Vessel by id passed by the client API.
         returns vessel
